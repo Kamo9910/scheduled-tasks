@@ -38,5 +38,11 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run script
-       
+        env:
+          OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
+          ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          Vitual_No: ${{ secrets.Vitual_No }} 
+          OWN_No: ${{ secrets.OWN_No }} 
+         
         run: python main.py
